@@ -1,17 +1,29 @@
-# basketball
+# 🏀 Basketball Point Counter
 
-A new Flutter project.
+A simple Flutter application for tracking the score of two basketball teams during a game.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- 🏀 Track the score of two teams.
+- ➕ Add 1 point to a team.
+- ➕ Add 2 points to a team.
+- ➕ Add 3 points to a team.
+- 📊 Display the current score for each team.
+- 🎨 Simple and clean user interface.
+- 🧩 Built using reusable Flutter widgets.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Technologies
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter
+- Dart
+- Material Design
+- Custom Widgets
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🎯 Project Purpose
+
+This project was created to practice Flutter fundamentals, including widget composition, reusable widgets, layouts, buttons, and managing user interactions.
+
+## 📱 Screens
+
+The application provides a simple interface where users can update the score of each basketball team by selecting the number of points scored.
+
