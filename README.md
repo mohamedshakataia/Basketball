@@ -4,26 +4,29 @@ A simple Flutter application for tracking the score of two basketball teams duri
 
 ## ✨ Features
 
-- 🏀 Track the score of two teams.
-- ➕ Add 1 point to a team.
-- ➕ Add 2 points to a team.
-- ➕ Add 3 points to a team.
-- 📊 Display the current score for each team.
-- 🎨 Simple and clean user interface.
-- 🧩 Built using reusable Flutter widgets.
+* 🏀 Track the score of two teams.
+* ➕ Add 1 point to a team.
+* ➕ Add 2 points to a team.
+* ➕ Add 3 points to a team.
+* 📊 Display the current score for each team.
+* 🎨 Simple and clean user interface.
+* 🧩 Built using reusable Flutter widgets.
+* 🔄 State management using Cubit (BLoC).
 
 ## 🛠️ Technologies
 
-- Flutter
-- Dart
-- Material Design
-- Custom Widgets
+* Flutter
+* Dart
+* BLoC / Cubit
+* Material Design
+* Custom Widgets
 
 ## 🎯 Project Purpose
 
-This project was created to practice Flutter fundamentals, including widget composition, reusable widgets, layouts, buttons, and managing user interactions.
+This project was created to practice Flutter fundamentals, including widget composition, reusable widgets, layouts, buttons, user interactions, and state management using Cubit.
+
+The application uses Cubit to manage and update the scores of both basketball teams in a simple and organized way.
 
 ## 📱 Screens
 
 The application provides a simple interface where users can update the score of each basketball team by selecting the number of points scored.
-
