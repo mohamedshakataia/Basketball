@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Buttonpoint extends StatelessWidget {
-  const Buttonpoint({super.key, required this.textbutton, this.ontap});
+class Buttonpoint1 extends StatelessWidget {
+  const Buttonpoint1({super.key, required this.textbutton, this.ontap});
   final String textbutton;
   final Function()? ontap;
   @override

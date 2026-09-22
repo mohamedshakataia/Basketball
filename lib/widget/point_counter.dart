@@ -1,52 +1,58 @@
+import 'package:basketball/cubits/teams_cubit/team_cubit.dart';
+import 'package:basketball/cubits/teams_cubit/team_state.dart';
 import 'package:basketball/helper/button.dart';
+import 'package:basketball/widget/pointrest.dart';
+import 'package:basketball/widget/teams.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class PointCounter extends StatelessWidget {
+class PointCounter extends StatefulWidget {
   const PointCounter({super.key});
   static String id = 'pointcounter';
 
   @override
+  State<PointCounter> createState() => _PointCounterState();
+}
+
+class _PointCounterState extends State<PointCounter> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return BlocConsumer<TeamCubit, TeamState>(
+      listener: (context, state) {
+        // TODO: implement listener
+      },
+      builder: (context, state) {
+        return Scaffold(
+          body: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Column(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Team A', style: TextStyle(fontSize: 32)),
-                    SizedBox(height: 20),
-                    Text('0', style: TextStyle(fontSize: 110)),
-                    SizedBox(height: 30),
-                    Buttonpoint(textbutton: 'Add 1 Point'),
-                    SizedBox(height: 20),
-                    Buttonpoint(textbutton: 'Add 2 Point'),
-                    SizedBox(height: 20),
-                    Buttonpoint(textbutton: 'Add 3 Point'),
+                    Teams(
+                      team: 'Team A',
+                      number: BlocProvider.of<TeamCubit>(context).teamA,
+                    ),
+                    Teams(
+                      team: 'Team B',
+                      number: BlocProvider.of<TeamCubit>(context).teamB,
+                    ),
                   ],
                 ),
-                Column(
-                  children: [
-                    Text('Team A', style: TextStyle(fontSize: 32)),
-                    SizedBox(height: 20),
-                    Text('0', style: TextStyle(fontSize: 110)),
-                    SizedBox(height: 30),
-                    Buttonpoint(textbutton: 'Add 1 Point'),
-                    SizedBox(height: 20),
-                    Buttonpoint(textbutton: 'Add 2 Point'),
-                    SizedBox(height: 20),
-                    Buttonpoint(textbutton: 'Add 3 Point'),
-                  ],
+                Buttonpoint1(
+                  textbutton: 'rest',
+                  ontap: () {
+                    BlocProvider.of<TeamCubit>(context).teampointrest(0);
+                    BlocProvider.of<TeamCubit>(context).teampointrest(0);
+                  },
                 ),
               ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }
